@@ -1,0 +1,14 @@
+C:\Users\white.o3\Desktop\prog1\P_186_SS\obj\x86\Debug\P_186_SS.pyprojResolveAssemblyReference.cache
+C:\Users\white.o3\Desktop\prog1\P_186_SS\obj\x86\Debug\P_186_SS.MainForm.resources
+C:\Users\white.o3\Desktop\prog1\P_186_SS\obj\x86\Debug\P_186_SS.pyproj.GenerateResource.Cache
+C:\Users\white.o3\Desktop\prog1\P_186_SS\bin\Debug\P_186_SS.exe.config
+C:\Users\white.o3\Desktop\prog1\P_186_SS\bin\Debug\P_186_SS.exe
+C:\Users\white.o3\Desktop\prog1\P_186_SS\bin\Debug\P_186_SS.dll
+C:\Users\white.o3\Desktop\prog1\P_186_SS\bin\Debug\IronPython.dll
+C:\Users\white.o3\Desktop\prog1\P_186_SS\bin\Debug\IronPython.Modules.dll
+C:\Users\white.o3\Desktop\prog1\P_186_SS\bin\Debug\Microsoft.Dynamic.dll
+C:\Users\white.o3\Desktop\prog1\P_186_SS\bin\Debug\Microsoft.Scripting.dll
+C:\Users\white.o3\Desktop\prog1\P_186_SS\bin\Debug\Microsoft.Scripting.Metadata.dll
+C:\Users\white.o3\Desktop\prog1\P_186_SS\bin\Debug\IronPython.xml
+C:\Users\white.o3\Desktop\prog1\P_186_SS\bin\Debug\IronPython.Modules.xml
+C:\Users\white.o3\Desktop\prog1\P_186_SS\obj\x86\Debug\P_186_SS.exe

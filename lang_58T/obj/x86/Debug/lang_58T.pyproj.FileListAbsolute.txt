@@ -1,0 +1,12 @@
+C:\Users\white.o3\Desktop\prog1\lang_58T\bin\Debug\lang_58T.exe.config
+C:\Users\white.o3\Desktop\prog1\lang_58T\bin\Debug\lang_58T.exe
+C:\Users\white.o3\Desktop\prog1\lang_58T\bin\Debug\lang_58T.dll
+C:\Users\white.o3\Desktop\prog1\lang_58T\bin\Debug\IronPython.dll
+C:\Users\white.o3\Desktop\prog1\lang_58T\bin\Debug\IronPython.Modules.dll
+C:\Users\white.o3\Desktop\prog1\lang_58T\bin\Debug\Microsoft.Dynamic.dll
+C:\Users\white.o3\Desktop\prog1\lang_58T\bin\Debug\Microsoft.Scripting.dll
+C:\Users\white.o3\Desktop\prog1\lang_58T\bin\Debug\Microsoft.Scripting.Metadata.dll
+C:\Users\white.o3\Desktop\prog1\lang_58T\bin\Debug\IronPython.xml
+C:\Users\white.o3\Desktop\prog1\lang_58T\bin\Debug\IronPython.Modules.xml
+C:\Users\white.o3\Desktop\prog1\lang_58T\obj\x86\Debug\lang_58T.pyprojResolveAssemblyReference.cache
+C:\Users\white.o3\Desktop\prog1\lang_58T\obj\x86\Debug\lang_58T.exe

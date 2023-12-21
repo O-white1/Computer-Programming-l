@@ -1,0 +1,14 @@
+C:\Users\white.o3\Desktop\prog1\Whack-A-Mole\bin\Debug\Whack-A-Mole.exe.config
+C:\Users\white.o3\Desktop\prog1\Whack-A-Mole\bin\Debug\Whack-A-Mole.exe
+C:\Users\white.o3\Desktop\prog1\Whack-A-Mole\bin\Debug\Whack-A-Mole.dll
+C:\Users\white.o3\Desktop\prog1\Whack-A-Mole\bin\Debug\IronPython.dll
+C:\Users\white.o3\Desktop\prog1\Whack-A-Mole\bin\Debug\IronPython.Modules.dll
+C:\Users\white.o3\Desktop\prog1\Whack-A-Mole\bin\Debug\Microsoft.Dynamic.dll
+C:\Users\white.o3\Desktop\prog1\Whack-A-Mole\bin\Debug\Microsoft.Scripting.dll
+C:\Users\white.o3\Desktop\prog1\Whack-A-Mole\bin\Debug\Microsoft.Scripting.Metadata.dll
+C:\Users\white.o3\Desktop\prog1\Whack-A-Mole\bin\Debug\IronPython.xml
+C:\Users\white.o3\Desktop\prog1\Whack-A-Mole\bin\Debug\IronPython.Modules.xml
+C:\Users\white.o3\Desktop\prog1\Whack-A-Mole\obj\x86\Debug\Whack-A-Mole.pyprojResolveAssemblyReference.cache
+C:\Users\white.o3\Desktop\prog1\Whack-A-Mole\obj\x86\Debug\Whack_A_Mole.MainForm.resources
+C:\Users\white.o3\Desktop\prog1\Whack-A-Mole\obj\x86\Debug\Whack-A-Mole.pyproj.GenerateResource.Cache
+C:\Users\white.o3\Desktop\prog1\Whack-A-Mole\obj\x86\Debug\Whack-A-Mole.exe

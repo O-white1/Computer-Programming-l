@@ -1,0 +1,14 @@
+C:\Users\white.o3\Desktop\prog1\Ahhhhhhhhhh_58t_for_real\obj\x86\Debug\Ahhhhhhhhhh_58t_for_real.pyprojResolveAssemblyReference.cache
+C:\Users\white.o3\Desktop\prog1\Ahhhhhhhhhh_58t_for_real\obj\x86\Debug\Ahhhhhhhhhh_58t_for_real.MainForm.resources
+C:\Users\white.o3\Desktop\prog1\Ahhhhhhhhhh_58t_for_real\obj\x86\Debug\Ahhhhhhhhhh_58t_for_real.pyproj.GenerateResource.Cache
+C:\Users\white.o3\Desktop\prog1\Ahhhhhhhhhh_58t_for_real\bin\Debug\Ahhhhhhhhhh_58t_for_real.exe.config
+C:\Users\white.o3\Desktop\prog1\Ahhhhhhhhhh_58t_for_real\bin\Debug\Ahhhhhhhhhh_58t_for_real.exe
+C:\Users\white.o3\Desktop\prog1\Ahhhhhhhhhh_58t_for_real\bin\Debug\Ahhhhhhhhhh_58t_for_real.dll
+C:\Users\white.o3\Desktop\prog1\Ahhhhhhhhhh_58t_for_real\bin\Debug\IronPython.dll
+C:\Users\white.o3\Desktop\prog1\Ahhhhhhhhhh_58t_for_real\bin\Debug\IronPython.Modules.dll
+C:\Users\white.o3\Desktop\prog1\Ahhhhhhhhhh_58t_for_real\bin\Debug\Microsoft.Dynamic.dll
+C:\Users\white.o3\Desktop\prog1\Ahhhhhhhhhh_58t_for_real\bin\Debug\Microsoft.Scripting.dll
+C:\Users\white.o3\Desktop\prog1\Ahhhhhhhhhh_58t_for_real\bin\Debug\Microsoft.Scripting.Metadata.dll
+C:\Users\white.o3\Desktop\prog1\Ahhhhhhhhhh_58t_for_real\bin\Debug\IronPython.xml
+C:\Users\white.o3\Desktop\prog1\Ahhhhhhhhhh_58t_for_real\bin\Debug\IronPython.Modules.xml
+C:\Users\white.o3\Desktop\prog1\Ahhhhhhhhhh_58t_for_real\obj\x86\Debug\Ahhhhhhhhhh_58t_for_real.exe

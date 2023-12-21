@@ -1,0 +1,14 @@
+C:\Users\white.o3\Desktop\prog1\Prog_122d\bin\Debug\Prog_122d.exe.config
+C:\Users\white.o3\Desktop\prog1\Prog_122d\bin\Debug\Prog_122d.exe
+C:\Users\white.o3\Desktop\prog1\Prog_122d\bin\Debug\Prog_122d.dll
+C:\Users\white.o3\Desktop\prog1\Prog_122d\bin\Debug\IronPython.dll
+C:\Users\white.o3\Desktop\prog1\Prog_122d\bin\Debug\IronPython.Modules.dll
+C:\Users\white.o3\Desktop\prog1\Prog_122d\bin\Debug\Microsoft.Dynamic.dll
+C:\Users\white.o3\Desktop\prog1\Prog_122d\bin\Debug\Microsoft.Scripting.dll
+C:\Users\white.o3\Desktop\prog1\Prog_122d\bin\Debug\Microsoft.Scripting.Metadata.dll
+C:\Users\white.o3\Desktop\prog1\Prog_122d\bin\Debug\IronPython.xml
+C:\Users\white.o3\Desktop\prog1\Prog_122d\bin\Debug\IronPython.Modules.xml
+C:\Users\white.o3\Desktop\prog1\Prog_122d\obj\x86\Debug\Prog_122d.pyprojResolveAssemblyReference.cache
+C:\Users\white.o3\Desktop\prog1\Prog_122d\obj\x86\Debug\Prog_122d.MainForm.resources
+C:\Users\white.o3\Desktop\prog1\Prog_122d\obj\x86\Debug\Prog_122d.pyproj.GenerateResource.Cache
+C:\Users\white.o3\Desktop\prog1\Prog_122d\obj\x86\Debug\Prog_122d.exe

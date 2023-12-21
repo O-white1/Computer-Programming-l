@@ -1,0 +1,14 @@
+C:\Users\white.o3\Desktop\prog1\PONG-real\obj\x86\Debug\PONG-real.pyprojResolveAssemblyReference.cache
+C:\Users\white.o3\Desktop\prog1\PONG-real\obj\x86\Debug\PONG_real.MainForm.resources
+C:\Users\white.o3\Desktop\prog1\PONG-real\obj\x86\Debug\PONG-real.pyproj.GenerateResource.Cache
+C:\Users\white.o3\Desktop\prog1\PONG-real\bin\Debug\PONG-real.exe.config
+C:\Users\white.o3\Desktop\prog1\PONG-real\bin\Debug\PONG-real.exe
+C:\Users\white.o3\Desktop\prog1\PONG-real\bin\Debug\PONG-real.dll
+C:\Users\white.o3\Desktop\prog1\PONG-real\bin\Debug\IronPython.dll
+C:\Users\white.o3\Desktop\prog1\PONG-real\bin\Debug\IronPython.Modules.dll
+C:\Users\white.o3\Desktop\prog1\PONG-real\bin\Debug\Microsoft.Dynamic.dll
+C:\Users\white.o3\Desktop\prog1\PONG-real\bin\Debug\Microsoft.Scripting.dll
+C:\Users\white.o3\Desktop\prog1\PONG-real\bin\Debug\Microsoft.Scripting.Metadata.dll
+C:\Users\white.o3\Desktop\prog1\PONG-real\bin\Debug\IronPython.xml
+C:\Users\white.o3\Desktop\prog1\PONG-real\bin\Debug\IronPython.Modules.xml
+C:\Users\white.o3\Desktop\prog1\PONG-real\obj\x86\Debug\PONG-real.exe

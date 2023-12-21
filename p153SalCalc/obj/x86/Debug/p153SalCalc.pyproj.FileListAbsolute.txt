@@ -1,0 +1,14 @@
+C:\Users\white.o3\Desktop\prog1\p153SalCalc\bin\Debug\p153SalCalc.exe.config
+C:\Users\white.o3\Desktop\prog1\p153SalCalc\bin\Debug\p153SalCalc.exe
+C:\Users\white.o3\Desktop\prog1\p153SalCalc\bin\Debug\p153SalCalc.dll
+C:\Users\white.o3\Desktop\prog1\p153SalCalc\bin\Debug\IronPython.dll
+C:\Users\white.o3\Desktop\prog1\p153SalCalc\bin\Debug\IronPython.Modules.dll
+C:\Users\white.o3\Desktop\prog1\p153SalCalc\bin\Debug\Microsoft.Dynamic.dll
+C:\Users\white.o3\Desktop\prog1\p153SalCalc\bin\Debug\Microsoft.Scripting.dll
+C:\Users\white.o3\Desktop\prog1\p153SalCalc\bin\Debug\Microsoft.Scripting.Metadata.dll
+C:\Users\white.o3\Desktop\prog1\p153SalCalc\bin\Debug\IronPython.xml
+C:\Users\white.o3\Desktop\prog1\p153SalCalc\bin\Debug\IronPython.Modules.xml
+C:\Users\white.o3\Desktop\prog1\p153SalCalc\obj\x86\Debug\p153SalCalc.pyprojResolveAssemblyReference.cache
+C:\Users\white.o3\Desktop\prog1\p153SalCalc\obj\x86\Debug\p153SalCalc.MainForm.resources
+C:\Users\white.o3\Desktop\prog1\p153SalCalc\obj\x86\Debug\p153SalCalc.pyproj.GenerateResource.Cache
+C:\Users\white.o3\Desktop\prog1\p153SalCalc\obj\x86\Debug\p153SalCalc.exe
