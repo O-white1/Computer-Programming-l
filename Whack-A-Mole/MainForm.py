@@ -1,4 +1,5 @@
-﻿import System.Drawing
+﻿import math
+import System.Drawing
 import System.Windows.Forms
 
 from System.Drawing import *
@@ -29,8 +30,14 @@ class MainForm(Form):
 		self._label3 = System.Windows.Forms.Label()
 		self._label4 = System.Windows.Forms.Label()
 		self._label5 = System.Windows.Forms.Label()
+		self._pictureBox3 = System.Windows.Forms.PictureBox()
+		self._pictureBox4 = System.Windows.Forms.PictureBox()
+		self._pictureBox5 = System.Windows.Forms.PictureBox()
 		self._pictureBox1.BeginInit()
 		self._pictureBox2.BeginInit()
+		self._pictureBox3.BeginInit()
+		self._pictureBox4.BeginInit()
+		self._pictureBox5.BeginInit()
 		self.SuspendLayout()
 		# 
 		# button1
@@ -73,7 +80,7 @@ class MainForm(Form):
 		# 
 		self._pictureBox2.BackgroundImage = resources.GetObject("pictureBox2.BackgroundImage")
 		self._pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-		self._pictureBox2.Location = System.Drawing.Point(12, 127)
+		self._pictureBox2.Location = System.Drawing.Point(12, 158)
 		self._pictureBox2.Name = "pictureBox2"
 		self._pictureBox2.Size = System.Drawing.Size(141, 109)
 		self._pictureBox2.TabIndex = 3
@@ -214,14 +221,50 @@ class MainForm(Form):
 		self._label5.Name = "label5"
 		self._label5.Size = System.Drawing.Size(163, 23)
 		self._label5.TabIndex = 16
-		self._label5.Text = "Milliseconds"
+		self._label5.Text = "Seconds!"
 		self._label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
 		self._label5.Visible = False
+		# 
+		# pictureBox3
+		# 
+		self._pictureBox3.BackgroundImage = resources.GetObject("pictureBox3.BackgroundImage")
+		self._pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+		self._pictureBox3.Location = System.Drawing.Point(12, 315)
+		self._pictureBox3.Name = "pictureBox3"
+		self._pictureBox3.Size = System.Drawing.Size(141, 109)
+		self._pictureBox3.TabIndex = 17
+		self._pictureBox3.TabStop = False
+		self._pictureBox3.Visible = False
+		# 
+		# pictureBox4
+		# 
+		self._pictureBox4.BackgroundImage = resources.GetObject("pictureBox4.BackgroundImage")
+		self._pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+		self._pictureBox4.Location = System.Drawing.Point(680, 170)
+		self._pictureBox4.Name = "pictureBox4"
+		self._pictureBox4.Size = System.Drawing.Size(141, 109)
+		self._pictureBox4.TabIndex = 18
+		self._pictureBox4.TabStop = False
+		self._pictureBox4.Visible = False
+		# 
+		# pictureBox5
+		# 
+		self._pictureBox5.BackgroundImage = resources.GetObject("pictureBox5.BackgroundImage")
+		self._pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+		self._pictureBox5.Location = System.Drawing.Point(680, 315)
+		self._pictureBox5.Name = "pictureBox5"
+		self._pictureBox5.Size = System.Drawing.Size(141, 109)
+		self._pictureBox5.TabIndex = 19
+		self._pictureBox5.TabStop = False
+		self._pictureBox5.Visible = False
 		# 
 		# MainForm
 		# 
 		self.BackColor = System.Drawing.Color.Silver
-		self.ClientSize = System.Drawing.Size(852, 448)
+		self.ClientSize = System.Drawing.Size(844, 448)
+		self.Controls.Add(self._pictureBox5)
+		self.Controls.Add(self._pictureBox4)
+		self.Controls.Add(self._pictureBox3)
 		self.Controls.Add(self._label5)
 		self.Controls.Add(self._label4)
 		self.Controls.Add(self._label3)
@@ -243,8 +286,12 @@ class MainForm(Form):
 		self.Text = "Whack-A-Mole"
 		self._pictureBox1.EndInit()
 		self._pictureBox2.EndInit()
+		self._pictureBox3.EndInit()
+		self._pictureBox4.EndInit()
+		self._pictureBox5.EndInit()
 		self.ResumeLayout(False)
-	
+		
+		# make picture variables, random number 2, 9, set for Crab game
 		
 
 	def Button1Click(self, sender, e):
@@ -264,8 +311,12 @@ class MainForm(Form):
 		self._label4.Visible = True
 		self._label5.Visible = True
 		self._timer1.Start()
-		TimeLeft = 2000
 
+		self.TimeLeft = 10
+		self.death = 10
+		
 	def Timer1Tick(self, sender, e):
-		TimeLeft -= 1
-		self._label4.Text = time
+		self.TimeLeft -= 1
+		self.death -= 1
+		if self.death <= 0:
+			self._timer1.Stop()
