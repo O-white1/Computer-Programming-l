@@ -1,6 +1,7 @@
 ﻿import math
 import System.Drawing
 import System.Windows.Forms
+import _random
 
 from System.Drawing import *
 from System.Windows.Forms import *
@@ -33,6 +34,7 @@ class MainForm(Form):
 		self._pictureBox3 = System.Windows.Forms.PictureBox()
 		self._pictureBox4 = System.Windows.Forms.PictureBox()
 		self._pictureBox5 = System.Windows.Forms.PictureBox()
+		self._label6 = System.Windows.Forms.Label()
 		self._pictureBox1.BeginInit()
 		self._pictureBox2.BeginInit()
 		self._pictureBox3.BeginInit()
@@ -44,13 +46,13 @@ class MainForm(Form):
 		# 
 		self._button1.BackgroundImage = resources.GetObject("button1.BackgroundImage")
 		self._button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-		self._button1.Font = System.Drawing.Font("Snap ITC", 26.25, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0)
-		self._button1.ForeColor = System.Drawing.Color.DeepPink
+		self._button1.Font = System.Drawing.Font("Ravie", 26.25, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0)
+		self._button1.ForeColor = System.Drawing.SystemColors.InfoText
 		self._button1.Location = System.Drawing.Point(181, 113)
 		self._button1.Name = "button1"
 		self._button1.Size = System.Drawing.Size(478, 183)
 		self._button1.TabIndex = 0
-		self._button1.Text = "Start Whack-A-Mole"
+		self._button1.Text = "Play Crustacean Station!"
 		self._button1.UseVisualStyleBackColor = True
 		self._button1.Click += self.Button1Click
 		# 
@@ -258,10 +260,22 @@ class MainForm(Form):
 		self._pictureBox5.TabStop = False
 		self._pictureBox5.Visible = False
 		# 
+		# label6
+		# 
+		self._label6.Font = System.Drawing.Font("Ravie", 15.75, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0)
+		self._label6.Location = System.Drawing.Point(181, 12)
+		self._label6.Name = "label6"
+		self._label6.Size = System.Drawing.Size(478, 66)
+		self._label6.TabIndex = 20
+		self._label6.Text = "Get the Blue Crab!"
+		self._label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+		self._label6.Visible = False
+		# 
 		# MainForm
 		# 
 		self.BackColor = System.Drawing.Color.Silver
 		self.ClientSize = System.Drawing.Size(844, 448)
+		self.Controls.Add(self._label6)
 		self.Controls.Add(self._pictureBox5)
 		self.Controls.Add(self._pictureBox4)
 		self.Controls.Add(self._pictureBox3)
@@ -291,7 +305,6 @@ class MainForm(Form):
 		self._pictureBox5.EndInit()
 		self.ResumeLayout(False)
 		
-		# make picture variables, random number 2, 9, set for Crab game
 		
 
 	def Button1Click(self, sender, e):
@@ -310,13 +323,57 @@ class MainForm(Form):
 		self._label3.Visible = True
 		self._label4.Visible = True
 		self._label5.Visible = True
+		self._label6.Visible = True
 		self._timer1.Start()
 
 		self.TimeLeft = 10
 		self.death = 10
+		self.score = 0
+		self.lives = 3
+		self.lvl = 1
 		
+		
+		pic1 = self._pictureBox2.BackgroundImage
+		self.pic2 = self._pictureBox3.BackgroundImage
+		self.pic3 = self._pictureBox4.BackgroundImage
+		self.pic4 = self._pictureBox5.BackgroundImage
+		
+		self.mole = pic1
+
+
 	def Timer1Tick(self, sender, e):
 		self.TimeLeft -= 1
 		self.death -= 1
-		if self.death <= 0:
-			self._timer1.Stop()
+		
+		if self.TimeLeft == 0:
+			self.LCV1 = round(random(1, 4)
+			if LCV1 == 1: #?
+				self.TL.BackgroundImage = pic1
+			elif LCV1 == 2:
+				self.TL.BackgroundImage = pic2
+			elif LCV1 == 3:
+				self.TL.BackgroundImage = pic3
+			elif LCV1 == 4:
+				self.TL.BackgroundImage = pic4
+				
+				
+			self.LCV2 = math.round(math.random(1-4))
+			if LCV2 == 1:
+				self.TM.BackgroundImage = pic1
+			elif LCV2 == 2:
+				self.TM.BackgroundImage = pic2
+			elif LCV2 == 3:
+				self.TM.BackgroundImage = pic3
+			elif LCV2 == 4:
+				self.TM.BackgroundImage = pic4
+				
+			self.LCV3 = math.round(math.random(1-4))
+			self.LCV4 = math.round(math.random(1-4))
+			self.LCV5 = math.round(math.random(1-4))
+			self.LCV6 = math.round(math.random(1-4))
+			self.LCV7 = math.round(math.random(1-4))
+			self.LCV8 = math.round(math.random(1-4))
+			self.LCV9 = math.round(math.random(1-4))
+			
+			
+			
