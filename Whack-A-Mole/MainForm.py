@@ -1,7 +1,6 @@
 ﻿import math
 import System.Drawing
 import System.Windows.Forms
-import _random
 
 from System.Drawing import *
 from System.Windows.Forms import *
@@ -9,6 +8,7 @@ from System.Windows.Forms import *
 class MainForm(Form):
 	def __init__(self):
 		self.InitializeComponent()
+		self.rand = System.Random()
 	
 	def InitializeComponent(self):
 		self._components = System.ComponentModel.Container()
@@ -35,6 +35,7 @@ class MainForm(Form):
 		self._pictureBox4 = System.Windows.Forms.PictureBox()
 		self._pictureBox5 = System.Windows.Forms.PictureBox()
 		self._label6 = System.Windows.Forms.Label()
+		self._label7 = System.Windows.Forms.Label()
 		self._pictureBox1.BeginInit()
 		self._pictureBox2.BeginInit()
 		self._pictureBox3.BeginInit()
@@ -62,7 +63,6 @@ class MainForm(Form):
 		self._TL.Name = "TL"
 		self._TL.Size = System.Drawing.Size(141, 109)
 		self._TL.TabIndex = 1
-		self._TL.Text = "button2"
 		self._TL.UseVisualStyleBackColor = True
 		self._TL.Visible = False
 		# 
@@ -95,7 +95,6 @@ class MainForm(Form):
 		self._TM.Name = "TM"
 		self._TM.Size = System.Drawing.Size(141, 109)
 		self._TM.TabIndex = 4
-		self._TM.Text = "button3"
 		self._TM.UseVisualStyleBackColor = True
 		self._TM.Visible = False
 		# 
@@ -105,7 +104,6 @@ class MainForm(Form):
 		self._TR.Name = "TR"
 		self._TR.Size = System.Drawing.Size(141, 109)
 		self._TR.TabIndex = 5
-		self._TR.Text = "button4"
 		self._TR.UseVisualStyleBackColor = True
 		self._TR.Visible = False
 		# 
@@ -115,7 +113,6 @@ class MainForm(Form):
 		self._ML.Name = "ML"
 		self._ML.Size = System.Drawing.Size(141, 109)
 		self._ML.TabIndex = 6
-		self._ML.Text = "button5"
 		self._ML.UseVisualStyleBackColor = True
 		self._ML.Visible = False
 		# 
@@ -125,7 +122,6 @@ class MainForm(Form):
 		self._MM.Name = "MM"
 		self._MM.Size = System.Drawing.Size(141, 109)
 		self._MM.TabIndex = 7
-		self._MM.Text = "button6"
 		self._MM.UseVisualStyleBackColor = True
 		self._MM.Visible = False
 		# 
@@ -135,7 +131,6 @@ class MainForm(Form):
 		self._MR.Name = "MR"
 		self._MR.Size = System.Drawing.Size(141, 109)
 		self._MR.TabIndex = 8
-		self._MR.Text = "button7"
 		self._MR.UseVisualStyleBackColor = True
 		self._MR.Visible = False
 		# 
@@ -145,7 +140,6 @@ class MainForm(Form):
 		self._BL.Name = "BL"
 		self._BL.Size = System.Drawing.Size(141, 109)
 		self._BL.TabIndex = 9
-		self._BL.Text = "button8"
 		self._BL.UseVisualStyleBackColor = True
 		self._BL.Visible = False
 		# 
@@ -155,17 +149,16 @@ class MainForm(Form):
 		self._BM.Name = "BM"
 		self._BM.Size = System.Drawing.Size(141, 109)
 		self._BM.TabIndex = 10
-		self._BM.Text = "button9"
 		self._BM.UseVisualStyleBackColor = True
 		self._BM.Visible = False
 		# 
 		# BR
 		# 
+		self._BR.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
 		self._BR.Location = System.Drawing.Point(518, 315)
 		self._BR.Name = "BR"
 		self._BR.Size = System.Drawing.Size(141, 109)
 		self._BR.TabIndex = 11
-		self._BR.Text = "button10"
 		self._BR.UseVisualStyleBackColor = True
 		self._BR.Visible = False
 		# 
@@ -271,10 +264,20 @@ class MainForm(Form):
 		self._label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
 		self._label6.Visible = False
 		# 
+		# label7
+		# 
+		self._label7.Location = System.Drawing.Point(232, 12)
+		self._label7.Name = "label7"
+		self._label7.Size = System.Drawing.Size(364, 23)
+		self._label7.TabIndex = 21
+		self._label7.Text = "label7"
+		self._label7.Visible = False
+		# 
 		# MainForm
 		# 
 		self.BackColor = System.Drawing.Color.Silver
 		self.ClientSize = System.Drawing.Size(844, 448)
+		self.Controls.Add(self._label7)
 		self.Controls.Add(self._label6)
 		self.Controls.Add(self._pictureBox5)
 		self.Controls.Add(self._pictureBox4)
@@ -331,14 +334,23 @@ class MainForm(Form):
 		self.score = 0
 		self.lives = 3
 		self.lvl = 1
+		self.LCV1 = 0
+		self.LCV2 = 0
+		self.LCV3 = 0
+		self.LCV4 = 0
+		self.LCV5 = 0
+		self.LCV6 = 0
+		self.LCV7 = 0
+		self.LCV8 = 0
+		self.LCV9 = 0
+		# pic 4 not deffined.
 		
 		
-		pic1 = self._pictureBox2.BackgroundImage
+		
+		self.pic1 = self._pictureBox2.BackgroundImage
 		self.pic2 = self._pictureBox3.BackgroundImage
 		self.pic3 = self._pictureBox4.BackgroundImage
 		self.pic4 = self._pictureBox5.BackgroundImage
-		
-		self.mole = pic1
 
 
 	def Timer1Tick(self, sender, e):
@@ -346,34 +358,104 @@ class MainForm(Form):
 		self.death -= 1
 		
 		if self.TimeLeft == 0:
-			self.LCV1 = round(random(1, 4)
-			if LCV1 == 1: #?
-				self.TL.BackgroundImage = pic1
-			elif LCV1 == 2:
-				self.TL.BackgroundImage = pic2
-			elif LCV1 == 3:
-				self.TL.BackgroundImage = pic3
-			elif LCV1 == 4:
-				self.TL.BackgroundImage = pic4
+			
+			
+			self.LCV1 = self.rand.Next(1, 5)
+			if self.LCV1 == 1:
+				self._TL.BackgroundImage = pic1
+			elif self.LCV1 == 2:
+				self._TL.BackgroundImage = pic2
+			elif self.LCV1 == 3:
+				self._TL.BackgroundImage = pic3
+			elif self.LCV1 == 4:
+				self._TL.BackgroundImage = pic4
 				
 				
-			self.LCV2 = math.round(math.random(1-4))
-			if LCV2 == 1:
-				self.TM.BackgroundImage = pic1
-			elif LCV2 == 2:
-				self.TM.BackgroundImage = pic2
-			elif LCV2 == 3:
-				self.TM.BackgroundImage = pic3
-			elif LCV2 == 4:
-				self.TM.BackgroundImage = pic4
+			self.LCV2 = self.rand.Next(1, 5)
+			if self.LCV2 == 1:
+				self._TM.BackgroundImage = pic1
+			elif self.LCV2 == 2:
+				self._TM.BackgroundImage = pic2
+			elif self.LCV2 == 3:
+				self._TM.BackgroundImage = pic3
+			elif self.LCV2 == 4:
+				self._TM.BackgroundImage = pic4
 				
-			self.LCV3 = math.round(math.random(1-4))
-			self.LCV4 = math.round(math.random(1-4))
-			self.LCV5 = math.round(math.random(1-4))
-			self.LCV6 = math.round(math.random(1-4))
-			self.LCV7 = math.round(math.random(1-4))
-			self.LCV8 = math.round(math.random(1-4))
-			self.LCV9 = math.round(math.random(1-4))
+			self.LCV3 = self.rand.Next(1, 5)
+			if self.LCV3 == 1:
+				self._TR.BackgroundImage = pic1
+			elif self.LCV3 == 2:
+				self._TR.BackgroundImage = pic2
+			elif self.LCV3 == 3:
+				self._TR.BackgroundImage = pic3
+			elif self.LCV3 == 4:
+				self._TR.BackgroundImage = pic4
+				
+				
+			self.LCV4 = self.rand.Next(1, 5)
+			if self.LCV4 == 1:
+				self._ML.BackgroundImage = pic1
+			elif self.LCV4 == 2:
+				self._ML.BackgroundImage = pic2
+			elif self.LCV4 == 3:
+				self._ML.BackgroundImage = pic3
+			elif self.LCV4 == 4:
+				self._ML.BackgroundImage = pic4
+				
+				
+			self.LCV5 = self.rand.Next(1, 5)
+			if self.LCV5 == 1:
+				self._MM.BackgroundImage = pic1
+			elif self.LCV5 == 2:
+				self._MM.BackgroundImage = pic2
+			elif self.LCV5 == 3:
+				self._MM.BackgroundImage = pic3
+			elif self.LCV5 == 4:
+				self._MM.BackgroundImage = pic4
+				
+				
+			self.LCV6 = self.rand.Next(1, 5)
+			if self.LCV6 == 1:
+				self._MR.BackgroundImage = pic1
+			elif self.LCV6 == 2:
+				self._MR.BackgroundImage = pic2
+			elif self.LCV6 == 3:
+				self._MR.BackgroundImage = pic3
+			elif self.LCV6 == 4:
+				self._MR.BackgroundImage = pic4
+				
+				
+			self.LCV7 = self.rand.Next(1, 5)
+			if self.LCV7 == 1:
+				self._BL.BackgroundImage = pic1
+			elif self.LCV7 == 2:
+				self._BL.BackgroundImage = pic2
+			elif self.LCV7 == 3:
+				self._BL.BackgroundImage = pic3
+			elif self.LCV7 == 4:
+				self._BL.BackgroundImage = pic4
+
+
+			self.LCV8 = self.rand.Next(1, 5)
+			if self.LCV8 == 1:
+				self._BM.BackgroundImage = pic1
+			elif self.LCV8 == 2:
+				self._BM.BackgroundImage = pic2
+			elif self.LCV8 == 3:
+				self._BM.BackgroundImage = pic3
+			elif self.LCV8 == 4:
+				self._BM.BackgroundImage = pic4
+				
+				
+			self.LCV9 = self.rand.Next(1, 5)
+			if self.LCV9 == 1:
+				self._BR.BackgroundImage = pic1
+			elif self.LCV9 == 2:
+				self._BR.BackgroundImage = pic2
+			elif self.LCV9 == 3:
+				self._BR.BackgroundImage = pic3
+			elif self.LCV9 == 4:
+				self._BR.BackgroundImage = pic4
 			
 			
 			
