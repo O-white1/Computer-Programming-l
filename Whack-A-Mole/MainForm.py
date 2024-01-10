@@ -344,10 +344,12 @@ class MainForm(Form):
 		self.pic3 = self._pictureBox4.BackgroundImage
 		self.pic4 = self._pictureBox5.BackgroundImage
 
-
+		self.TimeLeft = 10
 	def Timer1Tick(self, sender, e):
+		self.CRAB = self.rand.Next(1, 10)
 		self.TimeLeft -= 1
 		self.death -= 1
+		self._label4.Text = str(self.TimeLeft)
 		
 		if self.TimeLeft == 0:
 			
@@ -510,5 +512,5 @@ class MainForm(Form):
 								
 						
 								
-				# /* keep on bottom: */
-				TimeLeft += 10	
+		# /* keep on bottom: */
+	TimeLeft = 10	
