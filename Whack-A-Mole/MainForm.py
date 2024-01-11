@@ -343,6 +343,163 @@ class MainForm(Form):
 		self.pic2 = self._pictureBox3.BackgroundImage
 		self.pic3 = self._pictureBox4.BackgroundImage
 		self.pic4 = self._pictureBox5.BackgroundImage
+		
+		
+		
+		
+		self.LCV1 = self.rand.Next(1, 4)
+		if self.LCV1 == 1:
+			self._TL.BackgroundImage = self.pic1
+		elif self.LCV1 == 2:
+			self._TL.BackgroundImage = self.pic2
+		elif self.LCV1 == 3:
+			self._TL.BackgroundImage = self.pic3
+		elif self.LCV1 == 4:
+			self._TL.BackgroundImage = self.pic4
+			
+			
+		self.LCV2 = self.rand.Next(1, 4)
+		if self.LCV2 == 1:
+			self._TM.BackgroundImage = self.pic1
+		elif self.LCV2 == 2:
+			self._TM.BackgroundImage = self.pic2
+		elif self.LCV2 == 3:
+			self._TM.BackgroundImage = self.pic3
+		elif self.LCV2 == 4:
+			self._TM.BackgroundImage = self.pic4
+			
+		self.LCV3 = self.rand.Next(1, 4)
+		if self.LCV3 == 1:
+			self._TR.BackgroundImage = self.pic1
+		elif self.LCV3 == 2:
+			self._TR.BackgroundImage = self.pic2
+		elif self.LCV3 == 3:
+			self._TR.BackgroundImage = self.pic3
+		elif self.LCV3 == 4:
+			self._TR.BackgroundImage = self.pic4
+			
+			
+		self.LCV4 = self.rand.Next(1, 4)
+		if self.LCV4 == 1:
+			self._ML.BackgroundImage = self.pic1
+		elif self.LCV4 == 2:
+			self._ML.BackgroundImage = self.pic2
+		elif self.LCV4 == 3:
+			self._ML.BackgroundImage = self.pic3
+		elif self.LCV4 == 4:
+			self._ML.BackgroundImage = self.pic4
+			
+			
+		self.LCV5 = self.rand.Next(1, 4)
+		if self.LCV5 == 1:
+			self._MM.BackgroundImage = self.pic1
+		elif self.LCV5 == 2:
+			self._MM.BackgroundImage = self.pic2
+		elif self.LCV5 == 3:
+			self._MM.BackgroundImage = self.pic3
+		elif self.LCV5 == 4:
+			self._MM.BackgroundImage = self.pic4
+			
+			
+		self.LCV6 = self.rand.Next(1, 4)
+		if self.LCV6 == 1:
+			self._MR.BackgroundImage = self.pic1
+		elif self.LCV6 == 2:
+			self._MR.BackgroundImage = self.pic2
+		elif self.LCV6 == 3:
+			self._MR.BackgroundImage = self.pic3
+		elif self.LCV6 == 4:
+			self._MR.BackgroundImage = self.pic4
+			
+			
+		self.LCV7 = self.rand.Next(1, 4)
+		if self.LCV7 == 1:
+			self._BL.BackgroundImage = self.pic1
+		elif self.LCV7 == 2:
+			self._BL.BackgroundImage = self.pic2
+		elif self.LCV7 == 3:
+			self._BL.BackgroundImage = self.pic3
+		elif self.LCV7 == 4:
+			self._BL.BackgroundImage = self.pic4
+
+
+		self.LCV8 = self.rand.Next(1, 4)
+		if self.LCV8 == 1:
+			self._BM.BackgroundImage = self.pic1
+		elif self.LCV8 == 2:
+			self._BM.BackgroundImage = self.pic2
+		elif self.LCV8 == 3:
+			self._BM.BackgroundImage = self.pic3
+		elif self.LCV8 == 4:
+			self._BM.BackgroundImage = self.pic4
+			
+			
+		self.LCV9 = self.rand.Next(1, 4)
+		if self.LCV9 == 1:
+			self._BR.BackgroundImage = self.pic1
+		elif self.LCV9 == 2:
+			self._BR.BackgroundImage = self.pic2
+		elif self.LCV9 == 3:
+			self._BR.BackgroundImage = self.pic3
+		elif self.LCV9 == 4:
+			self._BR.BackgroundImage = self.pic4
+		
+		# /*Blue Crab */
+		CRAB = self.rand.Next(1, 10)
+		if CRAB == 1:
+			self._TL.BackgroundImage = self.pic4
+		elif CRAB == 2:
+			self._TM.BackgroundImage = self.pic4
+		elif CRAB == 3:
+			self._TR.BackgroundImage = self.pic4
+		elif CRAB == 4:
+			self._ML.BackgroundImage = self.pic4
+		elif CRAB == 5:
+			self._MM.BackgroundImage = self.pic4
+		elif CRAB == 6:
+			self._MR.BackgroundImage = self.pic4
+		elif CRAB == 7:
+			self._BL.BackgroundImage = self.pic4
+		elif CRAB == 8:
+			self._BM.BackgroundImage = self.pic4
+		elif CRAB == 9:
+			self._BR.BackgroundImage = self.pic4
+						
+			
+	def TLClick(self, sender, e):
+		if self.CRAB == 1:
+			self.score += 1
+	
+	def TMClick(self, sender, e):
+		if self.CRAB == 2:
+			self.score += 1
+	
+	def TRClick(self, sender, e):
+		if self.CRAB == 3:
+			self.score += 1
+	
+	def MLClick(self, sender, e):
+		if self.CRAB == 4:
+			self.score += 1
+	
+	def MMClick(self, sender, e):
+		if self.CRAB == 5:
+			self.score += 1
+	
+	def MRClick(self, sender, e):
+		if self.CRAB == 6:
+			self.score += 1
+	def BLClick(self, sender, e):
+		if self.CRAB == 7:
+			self.score += 1
+	
+	def BMClick(self, sender, e):
+		if self.CRAB == 8:
+			self.score += 1
+	
+	def BRClick(self, sender, e):
+		if self.CRAB == 9:
+			self.score += 1
 
 		self.TimeLeft = 10
 	def Timer1Tick(self, sender, e):
@@ -352,8 +509,6 @@ class MainForm(Form):
 		self._label4.Text = str(self.TimeLeft)
 		
 		if self.TimeLeft == 0:
-			
-			
 			self.LCV1 = self.rand.Next(1, 4)
 			if self.LCV1 == 1:
 				self._TL.BackgroundImage = self.pic1
@@ -428,8 +583,8 @@ class MainForm(Form):
 				self._BL.BackgroundImage = self.pic3
 			elif self.LCV7 == 4:
 				self._BL.BackgroundImage = self.pic4
-
-
+	
+	
 			self.LCV8 = self.rand.Next(1, 4)
 			if self.LCV8 == 1:
 				self._BM.BackgroundImage = self.pic1
@@ -450,8 +605,8 @@ class MainForm(Form):
 				self._BR.BackgroundImage = self.pic3
 			elif self.LCV9 == 4:
 				self._BR.BackgroundImage = self.pic4
-				
-				# /*Blue Crab */
+			
+			# /*Blue Crab */
 			CRAB = self.rand.Next(1, 10)
 			if CRAB == 1:
 				self._TL.BackgroundImage = self.pic4
@@ -471,46 +626,8 @@ class MainForm(Form):
 				self._BM.BackgroundImage = self.pic4
 			elif CRAB == 9:
 				self._BR.BackgroundImage = self.pic4
-						
+				
+			self.score -= 1
+			self.CRAB = self.rand.Next(1, 10)
+			self.TimeLeft = 10
 			
-	def TLClick(self, sender, e):
-		if self.CRAB == 1:
-			self.score += 1
-	
-	def TMClick(self, sender, e):
-		if self.CRAB == 2:
-			self.score += 1
-	
-	def TRClick(self, sender, e):
-		if self.CRAB == 3:
-			self.score += 1
-	
-	def MLClick(self, sender, e):
-		if self.CRAB == 4:
-			self.score += 1
-	
-	def MMClick(self, sender, e):
-		if self.CRAB == 5:
-			self.score += 1
-	
-	def MRClick(self, sender, e):
-		if self.CRAB == 6:
-			self.score += 1
-	def BLClick(self, sender, e):
-		if self.CRAB == 7:
-			self.score += 1
-	
-	def BMClick(self, sender, e):
-		if self.CRAB == 8:
-			self.score += 1
-	
-	def BRClick(self, sender, e):
-		if self.CRAB == 9:
-			self.score += 1
-							
-								
-								
-						
-								
-		# /* keep on bottom: */
-	TimeLeft = 10	
