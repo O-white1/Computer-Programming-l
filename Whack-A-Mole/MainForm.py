@@ -469,37 +469,46 @@ class MainForm(Form):
 	def TLClick(self, sender, e):
 		if self.CRAB == 1:
 			self.score += 1
+			Timeleft = 10
 	
 	def TMClick(self, sender, e):
 		if self.CRAB == 2:
 			self.score += 1
+			Timeleft = 10
 	
 	def TRClick(self, sender, e):
 		if self.CRAB == 3:
 			self.score += 1
+			Timeleft = 10
 	
 	def MLClick(self, sender, e):
 		if self.CRAB == 4:
 			self.score += 1
-	
+			Timeleft = 10
+			
 	def MMClick(self, sender, e):
 		if self.CRAB == 5:
 			self.score += 1
+			Timeleft = 10
 	
 	def MRClick(self, sender, e):
 		if self.CRAB == 6:
 			self.score += 1
+			Timeleft = 10
 	def BLClick(self, sender, e):
 		if self.CRAB == 7:
 			self.score += 1
+			Timeleft = 10
 	
 	def BMClick(self, sender, e):
 		if self.CRAB == 8:
 			self.score += 1
+			Timeleft = 10
 	
 	def BRClick(self, sender, e):
 		if self.CRAB == 9:
 			self.score += 1
+			Timeleft = 10
 
 		self.TimeLeft = 10
 	def Timer1Tick(self, sender, e):
@@ -507,6 +516,7 @@ class MainForm(Form):
 		self.TimeLeft -= 1
 		self.death -= 1
 		self._label4.Text = str(self.TimeLeft)
+		
 		
 		if self.TimeLeft == 0:
 			self.LCV1 = self.rand.Next(1, 4)
