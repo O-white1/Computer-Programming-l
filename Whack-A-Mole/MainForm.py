@@ -34,6 +34,8 @@ class MainForm(Form):
 		self._pictureBox3 = System.Windows.Forms.PictureBox()
 		self._pictureBox4 = System.Windows.Forms.PictureBox()
 		self._pictureBox5 = System.Windows.Forms.PictureBox()
+		self._label6 = System.Windows.Forms.Label()
+		self._label7 = System.Windows.Forms.Label()
 		self._pictureBox1.BeginInit()
 		self._pictureBox2.BeginInit()
 		self._pictureBox3.BeginInit()
@@ -269,10 +271,34 @@ class MainForm(Form):
 		self._pictureBox5.TabStop = False
 		self._pictureBox5.Visible = False
 		# 
+		# label6
+		# 
+		self._label6.Font = System.Drawing.Font("Playbill", 27.75, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0)
+		self._label6.Location = System.Drawing.Point(689, 175)
+		self._label6.Name = "label6"
+		self._label6.Size = System.Drawing.Size(115, 39)
+		self._label6.TabIndex = 20
+		self._label6.Text = "Lives:"
+		self._label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+		self._label6.Visible = False
+		# 
+		# label7
+		# 
+		self._label7.Font = System.Drawing.Font("Playbill", 36, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0)
+		self._label7.Location = System.Drawing.Point(689, 214)
+		self._label7.Name = "label7"
+		self._label7.Size = System.Drawing.Size(115, 82)
+		self._label7.TabIndex = 21
+		self._label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+		self._label7.Visible = False
+		self._label7.Click += self.Label7Click
+		# 
 		# MainForm
 		# 
 		self.BackColor = System.Drawing.Color.Silver
 		self.ClientSize = System.Drawing.Size(844, 448)
+		self.Controls.Add(self._label7)
+		self.Controls.Add(self._label6)
 		self.Controls.Add(self._pictureBox5)
 		self.Controls.Add(self._pictureBox4)
 		self.Controls.Add(self._pictureBox3)
@@ -320,12 +346,13 @@ class MainForm(Form):
 		self._label3.Visible = True
 		self._label4.Visible = True
 		self._label5.Visible = True
+		self._label6.Visible = True
+		self._label7.Visible = True
 		self._timer1.Start()
 
 		self.TimeLeft = 10
-		self.death = 10
+		self.lives = 4
 		self.score = 0
-		self.lives = 3
 		self.lvl = 1
 		self.LCV1 = 0
 		self.LCV2 = 0
@@ -336,6 +363,7 @@ class MainForm(Form):
 		self.LCV7 = 0
 		self.LCV8 = 0
 		self.LCV9 = 0
+		self.GotIt = False
 		
 		
 		
@@ -445,80 +473,103 @@ class MainForm(Form):
 			self._BR.BackgroundImage = self.pic4
 		
 		# /*Blue Crab */
-		CRAB = self.rand.Next(1, 10)
-		if CRAB == 1:
+		self.CRAB = self.rand.Next(1, 10)
+		if self.CRAB == 1:
 			self._TL.BackgroundImage = self.pic4
-		elif CRAB == 2:
+		elif self.CRAB == 2:
 			self._TM.BackgroundImage = self.pic4
-		elif CRAB == 3:
+		elif self.CRAB == 3:
 			self._TR.BackgroundImage = self.pic4
-		elif CRAB == 4:
+		elif self.CRAB == 4:
 			self._ML.BackgroundImage = self.pic4
-		elif CRAB == 5:
+		elif self.CRAB == 5:
 			self._MM.BackgroundImage = self.pic4
-		elif CRAB == 6:
+		elif self.CRAB == 6:
 			self._MR.BackgroundImage = self.pic4
-		elif CRAB == 7:
+		elif self.CRAB == 7:
 			self._BL.BackgroundImage = self.pic4
-		elif CRAB == 8:
+		elif self.CRAB == 8:
 			self._BM.BackgroundImage = self.pic4
-		elif CRAB == 9:
+		elif self.CRAB == 9:
 			self._BR.BackgroundImage = self.pic4
 						
 			
 	def TLClick(self, sender, e):
 		if self.CRAB == 1:
-			self.score += 1
+			self.GotIt = True
 			Timeleft = 10
+		else:
+			self.GotIt = False
 	
 	def TMClick(self, sender, e):
 		if self.CRAB == 2:
-			self.score += 1
+			self.GotIt = True
 			Timeleft = 10
+		else:
+			self.GotIt = False
 	
 	def TRClick(self, sender, e):
 		if self.CRAB == 3:
-			self.score += 1
+			self.GotIt = True
 			Timeleft = 10
+		else:
+			self.GotIt = False
 	
 	def MLClick(self, sender, e):
 		if self.CRAB == 4:
-			self.score += 1
+			self.GotIt = True
 			Timeleft = 10
+		else:
+			self.GotIt = False
 			
 	def MMClick(self, sender, e):
 		if self.CRAB == 5:
-			self.score += 1
+			self.GotIt = True
 			Timeleft = 10
+		else:
+			self.GotIt = False
 	
 	def MRClick(self, sender, e):
 		if self.CRAB == 6:
-			self.score += 1
+			self.GotIt = True
 			Timeleft = 10
 	def BLClick(self, sender, e):
 		if self.CRAB == 7:
-			self.score += 1
+			self.GotIt = True
 			Timeleft = 10
+		else:
+			self.GotIt = False
 	
 	def BMClick(self, sender, e):
 		if self.CRAB == 8:
-			self.score += 1
+			self.GotIt = True
 			Timeleft = 10
+		else:
+			self.GotIt = False
 	
 	def BRClick(self, sender, e):
 		if self.CRAB == 9:
-			self.score += 1
+			self.GotIt = True
 			Timeleft = 10
+		else:
+			self.GotIt = False
 
 		self.TimeLeft = 10
 	def Timer1Tick(self, sender, e):
 		self.CRAB = self.rand.Next(1, 10)
 		self.TimeLeft -= 1
-		self.death -= 1
 		self._label4.Text = str(self.TimeLeft)
 		
 		
+		
 		if self.TimeLeft == 0:
+			
+				
+				
+			if self.lives == 0:
+				Application.Exit()
+			
+			
 			self.LCV1 = self.rand.Next(1, 4)
 			if self.LCV1 == 1:
 				self._TL.BackgroundImage = self.pic1
@@ -637,7 +688,22 @@ class MainForm(Form):
 			elif CRAB == 9:
 				self._BR.BackgroundImage = self.pic4
 				
-			self.score -= 1
+			if self.GotIt == True:
+				self.score += 1
+			if self.GotIt == False:
+				self.lives -= 1
+				
+				
+
+				
+			# update score
+				
+			# self.score -= 1
 			self.CRAB = self.rand.Next(1, 10)
+			self._label1.Text = str(self.score)
+			self._label7.Text = str(self.lives)
 			self.TimeLeft = 10
-			
+		self.GotIt = False
+
+	def Label7Click(self, sender, e):
+		pass
