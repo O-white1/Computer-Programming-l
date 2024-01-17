@@ -234,7 +234,7 @@ class MainForm(Form):
 		self._label5.Name = "label5"
 		self._label5.Size = System.Drawing.Size(163, 23)
 		self._label5.TabIndex = 16
-		self._label5.Text = "Seconds!"
+		self._label5.Text = "Clock's ticking!"
 		self._label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
 		self._label5.Visible = False
 		# 
@@ -553,23 +553,53 @@ class MainForm(Form):
 			Timeleft = 10
 		else:
 			self.GotIt = False
+			
 
 		self.TimeLeft = 10
 	def Timer1Tick(self, sender, e):
-		self.CRAB = self.rand.Next(1, 10)
 		self.TimeLeft -= 1
 		self._label4.Text = str(self.TimeLeft)
+		def UpdateScore():
+			
+			if self.score >= 10:
+				temp = max(1, self._timer1.Interval - 10)
+				self._timer1.Interval = temp
+			elif self.score >= 15:
+				temp = max(1, self._timer1.Interval - 10)
+				self._timer1.Interval = temp
+			elif self.score >= 20:
+				temp = max(1, self._timer1.Interval - 10)
+				self._timer1.Interval = temp
+			elif self.score >= 25:
+				temp = max(1, self._timer1.Interval - 10)
+				self._timer1.Interval  = temp
+			elif self.score >= 30:
+				temp = max(1, self._timer1.Interval - 10)
+				self._timer1.Interval = temp
+		
+		
+		if self.lives == 0:
+			Application.Exit()
 		
 		
 		
 		if self.TimeLeft == 0:
+			self.Timeleft = 10
+			self.CRAB = self.rand.Next(1, 10) # changes crab
 			
+			if self.GotIt == True: # changes score
+				self.score += 1
+				UpdateScore()
+			if self.GotIt == False:
+				self.lives -= 1
+			self.GotIt = False
+	
 				
-				
-			if self.lives == 0:
-				Application.Exit()
+			self._label1.Text = str(self.score)
+			self._label7.Text = str(self.lives)
 			
 			
+			# changes all crustaceans
 			self.LCV1 = self.rand.Next(1, 4)
 			if self.LCV1 == 1:
 				self._TL.BackgroundImage = self.pic1
@@ -668,42 +698,28 @@ class MainForm(Form):
 				self._BR.BackgroundImage = self.pic4
 			
 			# /*Blue Crab */
-			CRAB = self.rand.Next(1, 10)
-			if CRAB == 1:
+			if self.CRAB == 1:
 				self._TL.BackgroundImage = self.pic4
-			elif CRAB == 2:
+			elif self.CRAB == 2:
 				self._TM.BackgroundImage = self.pic4
-			elif CRAB == 3:
+			elif self.CRAB == 3:
 				self._TR.BackgroundImage = self.pic4
-			elif CRAB == 4:
+			elif self.CRAB == 4:
 				self._ML.BackgroundImage = self.pic4
-			elif CRAB == 5:
+			elif self.CRAB == 5:
 				self._MM.BackgroundImage = self.pic4
-			elif CRAB == 6:
+			elif self.CRAB == 6:
 				self._MR.BackgroundImage = self.pic4
-			elif CRAB == 7:
+			elif self.CRAB == 7:
 				self._BL.BackgroundImage = self.pic4
-			elif CRAB == 8:
+			elif self.CRAB == 8:
 				self._BM.BackgroundImage = self.pic4
-			elif CRAB == 9:
+			elif self.CRAB == 9:
 				self._BR.BackgroundImage = self.pic4
 				
-			if self.GotIt == True:
-				self.score += 1
-			if self.GotIt == False:
-				self.lives -= 1
-				
-				
-
-				
-			# update score
-				
-			# self.score -= 1
-			self.CRAB = self.rand.Next(1, 10)
-			self._label1.Text = str(self.score)
-			self._label7.Text = str(self.lives)
+			self.GotIt = False
 			self.TimeLeft = 10
-		self.GotIt = False
+				
 
 	def Label7Click(self, sender, e):
 		pass
