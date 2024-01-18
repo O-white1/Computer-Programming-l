@@ -497,6 +497,7 @@ class MainForm(Form):
 	def TLClick(self, sender, e):
 		if self.CRAB == 1:
 			self.GotIt = True
+			self.lvl += 1
 			Timeleft = 10
 		else:
 			self.GotIt = False
@@ -504,6 +505,7 @@ class MainForm(Form):
 	def TMClick(self, sender, e):
 		if self.CRAB == 2:
 			self.GotIt = True
+			self.lvl += 1
 			Timeleft = 10
 		else:
 			self.GotIt = False
@@ -511,6 +513,7 @@ class MainForm(Form):
 	def TRClick(self, sender, e):
 		if self.CRAB == 3:
 			self.GotIt = True
+			self.lvl += 1
 			Timeleft = 10
 		else:
 			self.GotIt = False
@@ -518,6 +521,7 @@ class MainForm(Form):
 	def MLClick(self, sender, e):
 		if self.CRAB == 4:
 			self.GotIt = True
+			self.lvl += 1
 			Timeleft = 10
 		else:
 			self.GotIt = False
@@ -525,6 +529,7 @@ class MainForm(Form):
 	def MMClick(self, sender, e):
 		if self.CRAB == 5:
 			self.GotIt = True
+			self.lvl += 1
 			Timeleft = 10
 		else:
 			self.GotIt = False
@@ -532,10 +537,12 @@ class MainForm(Form):
 	def MRClick(self, sender, e):
 		if self.CRAB == 6:
 			self.GotIt = True
+			self.lvl += 1
 			Timeleft = 10
 	def BLClick(self, sender, e):
 		if self.CRAB == 7:
 			self.GotIt = True
+			self.lvl += 1
 			Timeleft = 10
 		else:
 			self.GotIt = False
@@ -543,6 +550,7 @@ class MainForm(Form):
 	def BMClick(self, sender, e):
 		if self.CRAB == 8:
 			self.GotIt = True
+			self.lvl += 1
 			Timeleft = 10
 		else:
 			self.GotIt = False
@@ -550,6 +558,7 @@ class MainForm(Form):
 	def BRClick(self, sender, e):
 		if self.CRAB == 9:
 			self.GotIt = True
+			self.lvl += 1
 			Timeleft = 10
 		else:
 			self.GotIt = False
@@ -561,22 +570,24 @@ class MainForm(Form):
 		self._label4.Text = str(self.TimeLeft)
 		def UpdateScore():
 			
-			if self.score >= 10:
-				temp = max(1, self._timer1.Interval - 10)
-				self._timer1.Interval = temp
-			elif self.score >= 15:
-				temp = max(1, self._timer1.Interval - 10)
-				self._timer1.Interval = temp
-			elif self.score >= 20:
-				temp = max(1, self._timer1.Interval - 10)
-				self._timer1.Interval = temp
-			elif self.score >= 25:
-				temp = max(1, self._timer1.Interval - 10)
-				self._timer1.Interval  = temp
-			elif self.score >= 30:
-				temp = max(1, self._timer1.Interval - 10)
-				self._timer1.Interval = temp
-		
+			
+			update based on level
+			
+			# if self.score >= 10:
+			# 	temp = max(1, self._timer1.Interval - 10)
+				#self._timer1.Interval = temp
+			# elif self.score >= 15:
+			#	temp = max(1, self._timer1.Interval - 10)
+			#	self._timer1.Interval = temp
+			#elif self.score >= 20:
+			#	temp = max(1, self._timer1.Interval - 10)
+			#	self._timer1.Interval = temp
+			#elif self.score >= 25:
+			#	temp = max(1, self._timer1.Interval - 10)
+			#	self._timer1.Interval  = temp
+			#elif self.score >= 30:
+			#	temp = max(1, self._timer1.Interval - 10)
+			#	self._timer1.Interval = temp	
 		
 		if self.lives == 0:
 			Application.Exit()
