@@ -562,45 +562,53 @@ class MainForm(Form):
 			Timeleft = 10
 		else:
 			self.GotIt = False
+	
+	
+	
+
 			
 
 		self.TimeLeft = 10
 	def Timer1Tick(self, sender, e):
 		self.TimeLeft -= 1
 		self._label4.Text = str(self.TimeLeft)
-		def UpdateScore():
 			
 			
-			update based on level
 			
-			# if self.score >= 10:
-			# 	temp = max(1, self._timer1.Interval - 10)
-				#self._timer1.Interval = temp
-			# elif self.score >= 15:
-			#	temp = max(1, self._timer1.Interval - 10)
-			#	self._timer1.Interval = temp
-			#elif self.score >= 20:
-			#	temp = max(1, self._timer1.Interval - 10)
-			#	self._timer1.Interval = temp
-			#elif self.score >= 25:
-			#	temp = max(1, self._timer1.Interval - 10)
-			#	self._timer1.Interval  = temp
-			#elif self.score >= 30:
-			#	temp = max(1, self._timer1.Interval - 10)
-			#	self._timer1.Interval = temp	
-		
+			
 		if self.lives == 0:
 			Application.Exit()
+			
+			
 		
 		
 		
 		if self.TimeLeft == 0:
+			
+			if self.lvl >= 10:
+				self._timer1.Interval = 90
+			if self.lvl >= 15:
+				self._timer1.Interval = 80
+			if self.lvl >= 20:
+				self._timer1.Interval = 75
+			if self.lvl >= 25:
+				self._timer1.Interval = 60
+			if self.lvl >= 30:
+				self._timer1.Interval = 50
+			if self.lvl >= 50:
+				self._timer1.Interval = 40
+			
+			
+			
+			
+			
+			
+			
 			self.Timeleft = 10
 			self.CRAB = self.rand.Next(1, 10) # changes crab
 			
 			if self.GotIt == True: # changes score
 				self.score += 1
-				UpdateScore()
 			if self.GotIt == False:
 				self.lives -= 1
 			self.GotIt = False
