@@ -351,7 +351,7 @@ class MainForm(Form):
 		self._timer1.Start()
 
 		self.TimeLeft = 10
-		self.lives = 4
+		self.lives = 10
 		self.score = 0
 		self.lvl = 1
 		self.LCV1 = 0
@@ -577,7 +577,24 @@ class MainForm(Form):
 			
 			
 		if self.lives == 0:
-			Application.Exit()
+			self._button1.Visible = True
+			self._TL.Visible = False
+			self._TM.Visible = False
+			self._TR.Visible = False
+			self._ML.Visible = False
+			self._MM.Visible = False
+			self._MR.Visible = False
+			self._BL.Visible = False
+			self._BM.Visible = False
+			self._BR.Visible = False
+			self._label1.Visible = False
+			self._label2.Visible = False
+			self._label3.Visible = False
+			self._label4.Visible = False
+			self._label5.Visible = False
+			self._label6.Visible = False
+			self._label7.Visible = False
+			self._timer1.Stop()
 			
 			
 		
@@ -592,11 +609,25 @@ class MainForm(Form):
 			if self.lvl >= 20:
 				self._timer1.Interval = 75
 			if self.lvl >= 25:
-				self._timer1.Interval = 60
+				self._timer1.Interval = 70
 			if self.lvl >= 30:
+				self._timer1.Interval = 65
+			if self.lvl >= 35:
+				self._timer1.Interval = 60
+			if self.lvl >= 40:
+				self._timer1.Interval = 55
+			if self.lvl >= 45:
 				self._timer1.Interval = 50
 			if self.lvl >= 50:
+				self._timer1.Interval = 45
+			if self.lvl >= 55:
 				self._timer1.Interval = 40
+			if self.lvl >= 60:
+				self._timer1.Interval = 35
+			if self.lvl >= 65:
+				self._timer1.Interval = 30
+			if self.lvl >= 70:
+				self._timer1.Interval = 25
 			
 			
 			
